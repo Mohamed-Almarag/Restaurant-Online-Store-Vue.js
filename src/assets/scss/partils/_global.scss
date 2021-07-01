@@ -1,0 +1,57 @@
+@import "./colors";
+
+%main-head {
+  position: relative;
+  z-index: 7;
+  color: $maincolor;
+  font: {
+    size: 60px;
+    family: "Dancing Script", cursive;
+    weight: 700;
+  }
+}
+
+%second-head {
+  color: $bgcolor3;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 7;
+  font-size: 25px;
+  font-weight: bold;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    bottom: -20px;
+  }
+  @media (min-width: 320px) and (max-width: 576px) {
+    font-size: 22px;
+  }
+}
+
+%before-overlay {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgba($black, 0.5);
+}
+
+%button {
+  display: inline-block;
+  outline: none;
+  border: 2px solid $maincolor;
+  padding: 10px 40px;
+  background-color: $maincolor;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: $white;
+    color: $maincolor;
+  }
+}
