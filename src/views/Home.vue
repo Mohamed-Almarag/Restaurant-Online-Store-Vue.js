@@ -11,21 +11,20 @@
 
 <script>
 // @ is an alias to /src
-import Description from '@/components/Home/Description.vue'
-import MainMeals from '@/components/Home/MainMeals.vue'
-import SubscribeNews from '@/components/Home/SubscribeNews.vue'
-import DeliciousFood from '@/components/Home/DeliciousFood'
+import Description from "@/components/Home/Description.vue";
+import MainMeals from "@/components/Home/MainMeals.vue";
+import SubscribeNews from "@/components/Home/SubscribeNews.vue";
+import DeliciousFood from "@/components/Home/DeliciousFood";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     Description,
     MainMeals,
     SubscribeNews,
-    DeliciousFood
-  }
-}
+    DeliciousFood,
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

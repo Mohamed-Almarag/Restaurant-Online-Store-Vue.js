@@ -1,12 +1,13 @@
-import blogs from "@/api/blogs";
+// import blogs from "@/api/blogs";
+import instance from "../../api/mockBlogs";
 
 export default {
-  getAllBlogsList({ commit, state }, page) {
+  getAllBlogsList({ commit, state }) {
     return new Promise((resolve, reject) => {
-      blogs
-        .allBlogs(page)
+      instance
+        .get("/blogs")
         .then((response) => {
-          commit("blogsList", state.blogsList.concat(response.data));
+          commit("blogsList", state.blogsList.concat(response.data.blogs));
           resolve(response);
         })
         .catch((error) => {
@@ -15,11 +16,13 @@ export default {
         });
     });
   },
+
   singleBlogPost({ commit }, singleBlogId) {
     return new Promise((resolve, reject) => {
-      blogs
-        .singleBlog(singleBlogId)
+      instance
+        .get(`/apps/user/users/${singleBlogId}`)
         .then((response) => {
+          // window.console.log(response);
           commit("SINGLE_BLOG", response.data);
           resolve(response);
         })
@@ -29,3 +32,22 @@ export default {
     });
   },
 };
+
+// getAllBlogsList({ commit, state }) {
+//   // getAllBlogsList({ commit, state }, page) {
+//   return new Promise((resolve, reject) => {
+//     // blogs
+//     //   .allBlogs(page)
+//     instance
+//       .get("/blogs")
+//       .then((response) => {
+//         commit("blogsList", state.blogsList.concat(response.data));
+//         window.console.log(response.data);
+//         resolve(response);
+//       })
+//       .catch((error) => {
+//         window.console.log(error);
+//         reject(error);
+//       });
+//   });
+// },

@@ -1,7 +1,8 @@
-import axios from "axios";
+// import axios from "axios";
+// // import MockAdapter from 'axios-mock-adapter';
 
-const Api = axios.create({
-  baseURL: "http://localhost:3000/",
-});
+// const Api = axios.create({
+//   baseURL: "http://localhost:3000/",
+// });
 
-export default Api;
+// export default Api;
