@@ -113,6 +113,7 @@ export default {
   .discription {
     @extend %second-head;
     margin-bottom: $margin-bottom;
+    color: $headcolor;
     &::before {
       background-image: url("../../assets/images/pages/before.png");
     }
@@ -122,6 +123,7 @@ export default {
     margin-bottom: 30px;
     .food-details {
       line-height: $pline;
+      color: $textcolor;
     }
     .food-list {
       padding: 30px 0;
@@ -173,15 +175,13 @@ export default {
         }
       }
     }
-    // .photo {
-    //   background-color: transparent;
-    // }
   }
   .see-all-foods {
     margin-top: 40px;
     color: $bgcolor3;
     h4 {
       line-height: $pline;
+      color: $headcolor;
     }
     .see-all {
       @extend %button;

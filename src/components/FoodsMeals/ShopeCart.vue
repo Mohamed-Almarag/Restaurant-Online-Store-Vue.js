@@ -125,6 +125,7 @@ export default {
         width: 100%;
       }
       .food-in-cart {
+        user-select: none;
         background-color: $bgcolor;
         border-radius: 5px;
         color: $bgcolor3;

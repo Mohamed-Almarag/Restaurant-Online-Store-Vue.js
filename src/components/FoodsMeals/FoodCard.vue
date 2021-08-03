@@ -137,12 +137,9 @@ export default {
       transform: translatey(-5px);
     }
     .food-photo-container {
-      // border-radius: 50%;
       .photo {
         width: 200px;
         height: 200px;
-        // width: 100%;
-        // height: 100%;
         border-radius: 50%;
         transition: 0.5s;
         padding: 2px;

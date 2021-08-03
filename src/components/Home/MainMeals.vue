@@ -60,6 +60,7 @@ export default {
   .second-head {
     @extend %second-head;
     margin-bottom: $padding;
+    color: $textcolor;
     &::before {
       background-image: url("../../assets/images/pages/before.png");
     }
@@ -90,7 +91,7 @@ export default {
       &.second {
         background-color: $maincolor;
         &:hover {
-          border: 1px solid $white;
+          border: 1px solid $bgcolor2;
           .meal-icon {
             background: $bgcolor2;
           }

@@ -206,8 +206,6 @@ export default {
     background: $bgcolor;
     position: fixed;
     inset: 0;
-    // display: flex;
-    // align-items: center;
     z-index: 8888888;
     .Close-slider-images {
       position: absolute;
@@ -225,7 +223,7 @@ export default {
     .VueCarousel {
       width: 65% !important;
       margin: auto !important;
-      height: 500px;
+      // height: 500px;
       @media (min-width: 320px) and (max-width: 576px) {
         width: 90% !important;
       }

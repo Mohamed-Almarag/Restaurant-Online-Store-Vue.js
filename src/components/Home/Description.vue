@@ -35,6 +35,7 @@ export default {
   background-position: center center;
   &::before {
     @extend %before-overlay;
+    background-color: rgba($black, 0.3);
   }
   .content {
     position: relative;

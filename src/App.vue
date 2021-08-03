@@ -23,7 +23,7 @@ components: {
 
 <style lang="scss">
 body {
-  background-color: $bgcolor2 !important;
+  background-color: $white !important;
 }
 ::-webkit-scrollbar {
   background-color: $bgcolor;

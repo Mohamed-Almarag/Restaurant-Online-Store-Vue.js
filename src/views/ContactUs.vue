@@ -13,7 +13,7 @@
       >feel free to do everything like reservation , contact us , some suggestions to improve our services.</p>
       <p class="reservation-text text-capitalize text-center">
         welcome to our restaurant anytime
-        <fa icon="heart" />
+        <fa class="heart-icon" icon="heart" />
       </p>
     </div>
     <div class="contact-content">
@@ -63,6 +63,8 @@ export default {
     }
   },
   methods: {
+    // It's Just A Simple Validation For Testing You Can Not Use It In The Real Project 
+    // It's Not The Best To Do Validation With It
     checkValidateForm() {
       this.errors = []
       if(!this.Name || !this.Email || !this.Phone || !this.Subject || !this.Message) {
@@ -91,11 +93,12 @@ export default {
   }
 }
 .contact-us {
-  background-color: $bgcolor;
+  // background-color: $bgcolor;
   .reservation {
     padding-top: $padding;
+    padding-bottom: $padding - 20;
     .reservation-heading {
-      color: $starscolor;
+      color: $maincolor;
       @extend %second-head;
       &::before {
         background-image: url("../assets/images/pages/before.png");
@@ -103,13 +106,17 @@ export default {
     }
     .reservation-text {
       line-height: $pline;
-      color: $bgcolor3;
+      color: $textcolor;
+      .heart-icon {
+        color: #f00;
+      }
     }
   }
   .contact-content {
     padding-top: $padding;
+    border-top: 1px solid rgba($textcolor, 0.3);
     .contact-heading {
-      color: $starscolor;
+      color: $maincolor;
       @extend %second-head;
       &::before {
         background-image: url("../assets/images/pages/before.png");
@@ -122,15 +129,14 @@ export default {
         margin-bottom: 30px;
         .form-input,
         .form-textarea {
-          color: $bgcolor3;
+          color: $textcolor;
           padding: 8px 16px;
           background: none;
-          border: 1px solid $textcolor;
+          border: 1px solid rgba($textcolor, 0.3);
           transition: 0.5s;
           &:focus {
             outline: none;
             border-color: $maincolor;
-            box-shadow: 0 0 6px $maincolor;
           }
         }
         .form-textarea {

@@ -42,12 +42,13 @@ export default {
   }
   h3 {
     @extend %second-head;
+    color: $headcolor;
     &::before {
       background-image: url("../../assets/images/pages/before.png");
     }
   }
   p {
-    color: $bgcolor3;
+    color: $textcolor;
     line-height: 1.7;
     margin-bottom: 60px;
   }

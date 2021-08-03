@@ -31,6 +31,6 @@ export default {
 .foods-list {
   padding-top: $padding;
   padding-bottom: $padding - 30;
-  background-color: $bgcolor2;
+  // background-color: $bgcolor2;
 }
 </style>
