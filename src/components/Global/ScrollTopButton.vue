@@ -31,7 +31,7 @@ export default {
           top: 0,
           behavior: "smooth"
         });
-      },300)
+      },500)
     }
   },
 }

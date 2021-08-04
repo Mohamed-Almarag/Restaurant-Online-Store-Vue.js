@@ -1,6 +1,10 @@
 <template>
   <div id="nav" class="nav-header">
-    <nav @scroll="handleSCroll" class="navbar navbar-expand-lg fixed-top">
+    <nav
+      @scroll="handleSCroll"
+      :class="{'shop-cart': $route.name == 'Cart'}"
+      class="navbar navbar-expand-lg fixed-top"
+    >
       <div class="container">
         <router-link :to="{ name: 'Home' }" class="navbar-brand">DAHSHA</router-link>
         <button
@@ -29,7 +33,7 @@
               <router-link :to="{ name: 'Foods' }" class="nav-link">Foods</router-link>
             </li>
             <li class="nav-item">
-              <router-link :to="{ name: 'Blog' }" class="nav-link">Blog</router-link>
+              <router-link :to="{ name: 'Blog' }" class="nav-link">Blogs</router-link>
             </li>
             <li class="nav-item">
               <router-link :to="{ name: 'ContactUs' }" class="nav-link">Contact Us</router-link>
@@ -104,6 +108,9 @@ export default {
       background-color: $bgcolor2;
       padding: 1rem 1rem;
       box-shadow: 0px 3px 8px rgba($black, 0.7);
+    }
+    &.shop-cart {
+      background-color: $bgcolor2;
     }
     .navbar-brand {
       color: $maincolor;
@@ -185,7 +192,6 @@ export default {
               position: absolute;
               top: -15px;
               left: 50%;
-              // left: 9px;
               background: $maincolor;
               border-radius: 50%;
               padding: 3px;

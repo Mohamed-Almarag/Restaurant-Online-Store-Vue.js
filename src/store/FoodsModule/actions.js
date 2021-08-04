@@ -1,15 +1,11 @@
-// import foods from "@/api/foods";
 import instance from "../../api/mockFoods";
 export default {
   getAllFoodsList({ commit }) {
     return new Promise((resolve, reject) => {
-      // foods
-      //   .allFoods()
       instance
         .get("/foods")
         .then((response) => {
           commit("FOODS_LIST", response.data.foods);
-          // window.console.log(response.data.foods);
           resolve(response);
         })
         .catch((error) => {
@@ -20,8 +16,6 @@ export default {
 
   singleFoodType({ commit }, foodId) {
     return new Promise((resolve, reject) => {
-      // foods
-      //   .singleFood(foodId)
       instance
         .get(`/apps/user/users/${foodId}`)
         .then((response) => {

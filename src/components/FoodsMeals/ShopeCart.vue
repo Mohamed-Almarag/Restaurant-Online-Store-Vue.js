@@ -67,6 +67,11 @@
 <script>
 export default {
   name: "Cart",
+  data() {
+    return {
+      cart: ''
+    }
+  },
   computed: {
     cartItems() {
       return this.$store.state.foods.shopCart;
@@ -89,6 +94,7 @@ export default {
     decreaseQuantinty(food) {
       this.$store.dispatch("decreaseQuantintyInShopCart", food);
     },
+
   }
   // mounted() {
   //   this.$store.dispatch("getFoodsFromCart");
@@ -100,7 +106,7 @@ export default {
 .shop-cart {
   padding-top: $padding + 50;
   padding-bottom: $padding - 20;
-  background-color: $bgcolor2;
+  position: relative;
   &.no-items {
     height: 100vh;
     padding-top: 0;
@@ -108,9 +114,10 @@ export default {
     align-items: center;
     justify-content: center;
     font-size: 29px;
+    font-weight: bold;
   }
   .empty-cart {
-    color: $bgcolor3;
+    color: $maincolor;
   }
   .main-container {
     display: flex;
@@ -152,15 +159,9 @@ export default {
           }
         }
         .food-deatils {
-          // .meal-price {
-          //   display: flex;
-          //   justify-content: space-around;
-          //   align-items: center;
-          // }
           .price-meal {
             margin: 15px 0;
           }
-
           .increase-decrease-quantity {
             background-color: $bgcolor2;
             padding: 8px;

@@ -22,12 +22,6 @@
           </div>
         </div>
       </div>
-      <button
-        type="button"
-        class="load-more text-capitalize"
-        :class="{'all-blogs-loaded': blogssListLength == 17}"
-        @click="loadMoreBlogs"
-      >load more</button>
     </div>
   </div>
 </template>
@@ -40,33 +34,22 @@ export default {
   name: "BlogPost",
   data (){
     return {
-      page:1,
       isLoaded: false
     }
   },
-    created() {
+  mounted() {
     this.isLoaded = true
-    if(this.$store.state.blogs.blogsList.length == 0 ) {
-      this.$store.dispatch("getAllBlogsList", this.page)
-      
-    }
-    setTimeout(() => {
+    this.$store.dispatch("getAllBlogsList").finally(() => {
       this.isLoaded = false
-    },500)
+    });
   },
-    
+
   computed: {
     blogssList() {
       return this.$store.state.blogs.blogsList
     },
     blogssListLength() {
       return this.$store.getters.getBlogListLength
-    },
-  },
-  methods:{
-    loadMoreBlogs() {
-      this.page += 1
-      this.$store.dispatch("getAllBlogsList", this.page)
     },
   },
 }
