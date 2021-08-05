@@ -97,6 +97,9 @@ export default {
               text-decoration: none;
               transition: 0.5s;
               color: $starscolor;
+              &:hover {
+                text-decoration: underline;
+              }
             }
           }
           .blog-content {
