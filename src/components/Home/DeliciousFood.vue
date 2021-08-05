@@ -153,7 +153,11 @@ export default {
           }
         }
         .food-image {
+          transition: 0.3s ease-in-out;
           height: 100%;
+          &:hover {
+            transform: scale(1.1);
+          }
         }
 
         .food-name {

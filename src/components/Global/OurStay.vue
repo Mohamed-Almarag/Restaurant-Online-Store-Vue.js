@@ -68,6 +68,7 @@ export default {
       line-height: $pline;
       margin: auto;
       color: $textcolor;
+      text-align: center;
       &.last {
         margin-top: 30px;
       }

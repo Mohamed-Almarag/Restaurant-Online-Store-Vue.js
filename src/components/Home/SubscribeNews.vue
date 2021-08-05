@@ -72,6 +72,7 @@ export default {
   .title-2 {
     @extend %second-head;
     margin-bottom: $margin-bottom;
+
     &::before {
       background-image: url("../../assets/images/pages/before.png");
     }
@@ -79,12 +80,14 @@ export default {
   .blogs-content {
     .blog-container {
       .blog-content {
-        background-color: $white;
+        background-color: #f7f7f7;
         padding: 30px 10px;
         margin-bottom: $margin-bottom - 30px;
         color: $textcolor;
+        border-radius: 5px;
         .content-title {
           color: $textcolor;
+          color: $headcolor;
         }
         .blog-images {
           padding: 20px 0;
